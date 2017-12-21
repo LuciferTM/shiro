@@ -1,5 +1,6 @@
 package com.lucifer.shiro2.c3;
 
+import com.lucifer.shiro2.BaseTest;
 import org.apache.shiro.authz.UnauthorizedException;
 import org.apache.shiro.authz.permission.WildcardPermission;
 import org.junit.Assert;
@@ -23,7 +24,7 @@ import org.junit.Test;
  另外实例级别的权限验证如果数据量太大也不建议使用，可能造成查询权限及匹配变慢。
  可以考虑比如在sql查询时加上权限字符串之类的方式在查询时就完成了权限匹配。
  * */
-public class PermissionTest extends BaseTest{
+public class PermissionTest extends BaseTest {
     @Test
     public void testIsPermitted() {
         login("classpath:c3/shiro-permission.ini", "zhang", "123");

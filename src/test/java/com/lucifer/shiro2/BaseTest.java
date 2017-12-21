@@ -1,4 +1,4 @@
-package com.lucifer.shiro2.c3;
+package com.lucifer.shiro2;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;

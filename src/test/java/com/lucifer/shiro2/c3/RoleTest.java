@@ -1,5 +1,6 @@
 package com.lucifer.shiro2.c3;
 
+import com.lucifer.shiro2.BaseTest;
 import org.apache.shiro.authz.UnauthorizedException;
 import org.junit.Assert;
 import org.junit.Test;
