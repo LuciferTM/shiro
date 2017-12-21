@@ -9,7 +9,10 @@ import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 
-
+/**
+ * 为了方便，直接注入一个passwordService来加密密码，
+ * 实际使用时需要在Service层使用passwordService加密密码并存到数据库。
+ * */
 public class MyRealm extends AuthorizingRealm {
 
     private PasswordService passwordService;
