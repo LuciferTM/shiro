@@ -1,4 +1,4 @@
-package com.lucifer.shiro2;
+package com.lucifer.shiro2.c2;
 
 
 

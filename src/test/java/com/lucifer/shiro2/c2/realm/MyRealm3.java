@@ -1,4 +1,4 @@
-package com.lucifer.shiro2.realm;
+package com.lucifer.shiro2.c2.realm;
 
 import org.apache.shiro.authc.*;
 import org.apache.shiro.realm.Realm;

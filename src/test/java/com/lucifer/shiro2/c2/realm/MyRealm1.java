@@ -1,17 +1,16 @@
-package com.lucifer.shiro2.realm;
+package com.lucifer.shiro2.c2.realm;
 
 import org.apache.shiro.authc.*;
 import org.apache.shiro.realm.Realm;
 
-/**
- * Created by lucifer on 20/12/2017.
- */
-public class MyRealm2 implements Realm {
+
+public class MyRealm1 implements Realm {
+
+    //返回一个唯一的Realm名字
     @Override
     public String getName() {
-        return "myrealm2";
+        return "myrealm1";
     }
-
     //判断此Realm是否支持此Token
     @Override
     public boolean supports(AuthenticationToken token) {
@@ -22,7 +21,7 @@ public class MyRealm2 implements Realm {
     public AuthenticationInfo getAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
         String username = (String)token.getPrincipal();  //得到用户名
         String password = new String((char[])token.getCredentials()); //得到密码
-        if(!"wang".equals(username)) {
+        if(!"zhang".equals(username)) {
             throw new UnknownAccountException(); //如果用户名错误
         }
         if(!"123".equals(password)) {
