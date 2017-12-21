@@ -125,7 +125,7 @@ public class CodecAndCryptoTest {
     }
 
 
-
+    //不懂为什么这里request和service的算法不一样
     @Test
     public void testHashService() {
         DefaultHashService hashService = new DefaultHashService(); //默认算法SHA-512

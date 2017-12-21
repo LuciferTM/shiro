@@ -1,6 +1,7 @@
 package com.lucifer.shiro2.c6.realm;
 
-import com.github.zhangkaitao.shiro.chapter6.BaseTest;
+
+import com.lucifer.shiro2.c6.BaseTest;
 import com.lucifer.shiro2.c6.entity.User;
 import junit.framework.Assert;
 import org.apache.shiro.subject.PrincipalCollection;
