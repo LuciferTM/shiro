@@ -21,7 +21,7 @@ public class AuthenticatorTest {
 
     @Test
     public void testAllSuccessfulStrategyWithSuccess() {
-        login("classpath:shiro-authenticator-all-success.ini");
+        login("classpath:c2/shiro-authenticator-all-success.ini");
         Subject subject = SecurityUtils.getSubject();
 
         //得到一个身份集合，其包含了Realm验证成功的身份信息
@@ -31,12 +31,12 @@ public class AuthenticatorTest {
 
     @Test(expected = UnknownAccountException.class)
     public void testAllSuccessfulStrategyWithFail() {
-        login("classpath:shiro-authenticator-all-fail.ini");
+        login("classpath:c2/shiro-authenticator-all-fail.ini");
     }
 
     @Test
     public void testAtLeastOneSuccessfulStrategyWithSuccess() {
-        login("classpath:shiro-authenticator-atLeastOne-success.ini");
+        login("classpath:c2/shiro-authenticator-atLeastOne-success.ini");
         Subject subject = SecurityUtils.getSubject();
 
         //得到一个身份集合，其包含了Realm验证成功的身份信息
@@ -46,7 +46,7 @@ public class AuthenticatorTest {
 
     @Test
     public void testFirstOneSuccessfulStrategyWithSuccess() {
-        login("classpath:shiro-authenticator-first-success.ini");
+        login("classpath:c2/shiro-authenticator-first-success.ini");
         Subject subject = SecurityUtils.getSubject();
 
         //得到一个身份集合，其包含了第一个Realm验证成功的身份信息
@@ -56,7 +56,7 @@ public class AuthenticatorTest {
 
     @Test
     public void testAtLeastTwoStrategyWithSuccess() {
-        login("classpath:shiro-authenticator-atLeastTwo-success.ini");
+        login("classpath:c2/shiro-authenticator-atLeastTwo-success.ini");
         Subject subject = SecurityUtils.getSubject();
 
         //得到一个身份集合，因为myRealm1和myRealm4返回的身份一样所以输出时只返回一个
@@ -66,7 +66,7 @@ public class AuthenticatorTest {
 
     @Test
     public void testOnlyOneStrategyWithSuccess() {
-        login("classpath:shiro-authenticator-onlyone-success.ini");
+        login("classpath:c2/shiro-authenticator-onlyone-success.ini");
         Subject subject = SecurityUtils.getSubject();
 
         //得到一个身份集合，因为myRealm1和myRealm4返回的身份一样所以输出时只返回一个
