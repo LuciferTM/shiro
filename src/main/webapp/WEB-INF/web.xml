@@ -42,9 +42,12 @@
 
 
     <!--- shiro 1.2 -->
+    <!--从Shiro 1.2开始引入了Environment/WebEnvironment的概念，即由它们的实现提供相应的SecurityManager及其相应的依赖。-->
+    <!--ShiroFilter会自动找到Environment然后获取相应的依赖。&ndash;&gt;-->
     <listener>
         <listener-class>org.apache.shiro.web.env.EnvironmentLoaderListener</listener-class>
     </listener>
+    <!--可以通过如下配置修改默认实现及其加载的配置文件位置：-->
     <context-param>
         <param-name>shiroEnvironmentClass</param-name>
         <param-value>org.apache.shiro.web.env.IniWebEnvironment</param-value><!-- 默认先从/WEB-INF/shiro.ini，如果没有找classpath:shiro.ini -->
@@ -53,6 +56,12 @@
         <param-name>shiroConfigLocations</param-name>
         <param-value>classpath:shiro.ini</param-value>
     </context-param>
+
+    <!--于Spring集成-->
+    <!--DelegatingFilterProxy作用是自动到spring容器查找名字为shiroFilter（filter-name）的bean-->
+    <!--并把所有Filter的操作委托给它。然后将ShiroFilter配置到spring容器即可：-->
+    <!--最后不要忘了使用org.springframework.web.context.ContextLoaderListener加载这个spring配置文件即可。-->
+    <!--详见与Spring集成-->
     <filter>
         <filter-name>shiroFilter</filter-name>
         <filter-class>org.apache.shiro.web.servlet.ShiroFilter</filter-class>
