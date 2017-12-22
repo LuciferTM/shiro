@@ -12,7 +12,7 @@ import java.util.Set;
  * <p>Version: 1.0
  */
 public class UserServiceImpl implements UserService {
-
+    //在Spring之中这些都可以autowired
     private UserDao userDao = new UserDaoImpl();
     private PasswordHelper passwordHelper = new PasswordHelper();
 
