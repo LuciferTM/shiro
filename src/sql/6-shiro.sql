@@ -7,7 +7,7 @@ drop table if exists sys_roles_permissions;
 create table sys_users (
   id bigint auto_increment,
   username varchar(100),
-  password varchar(100),
+  password varchar(256),
   salt varchar(100),
   locked bool default false,
   constraint pk_sys_users primary key(id)

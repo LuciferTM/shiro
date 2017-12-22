@@ -2,11 +2,6 @@ package com.lucifer.shiro2.c6.entity;
 
 import java.io.Serializable;
 
-/**
- * <p>User: Zhang Kaitao
- * <p>Date: 14-1-28
- * <p>Version: 1.0
- */
 public class Permission implements Serializable {
     private Long id;
     private String permission; //权限标识 程序中判断使用,如"user:create"
