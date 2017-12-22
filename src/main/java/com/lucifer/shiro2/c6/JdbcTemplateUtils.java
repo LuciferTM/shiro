@@ -4,9 +4,7 @@ import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 /**
- * <p>User: Zhang Kaitao
- * <p>Date: 14-1-28
- * <p>Version: 1.0
+ * jdbcTemplate用于执行原生sql语句，封装好的框架就是hibernate/mybaits
  */
 public class JdbcTemplateUtils {
 
@@ -25,7 +23,7 @@ public class JdbcTemplateUtils {
         ds.setDriverClassName("com.mysql.jdbc.Driver");
         ds.setUrl("jdbc:mysql://localhost:3306/shiro");
         ds.setUsername("root");
-        ds.setPassword("");
+        ds.setPassword("qiangang");
 
         return new JdbcTemplate(ds);
     }
