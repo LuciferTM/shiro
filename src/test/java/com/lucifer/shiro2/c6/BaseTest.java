@@ -14,9 +14,6 @@ import org.junit.After;
 import org.junit.Before;
 
 /**
- * <p>User: Zhang Kaitao
- * <p>Date: 14-1-28
- * <p>Version: 1.0
  */
 public abstract class BaseTest {
 
@@ -38,6 +35,7 @@ public abstract class BaseTest {
 
     @Before
     public void setUp() {
+        //sql delete from table_name where ... 删除表中的数据
         JdbcTemplateUtils.jdbcTemplate().update("delete from sys_users");
         JdbcTemplateUtils.jdbcTemplate().update("delete from sys_roles");
         JdbcTemplateUtils.jdbcTemplate().update("delete from sys_permissions");

@@ -8,9 +8,6 @@ import org.junit.Test;
 import java.util.Set;
 
 /**
- * <p>User: Zhang Kaitao
- * <p>Date: 14-1-28
- * <p>Version: 1.0
  */
 public class ServiceTest extends BaseTest {
 
