@@ -16,11 +16,12 @@ import java.util.Set;
  * <p>Date: 14-1-29
  * <p>Version: 1.0
  */
+
 public class PrincialCollectionTest extends BaseTest {
 
     @Test
     public void test() {
-
+        //TODO 没有学习
         //因为Realm里没有进行验证，所以相当于每个Realm都身份验证成功了
         login("classpath:shiro-multirealm.ini", "zhang", "123");
         Subject subject = subject();
