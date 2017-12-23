@@ -16,8 +16,8 @@ import java.io.IOException;
  */
 public class FormLoginFilter extends PathMatchingFilter {
 
-    private String loginUrl = "/login.jsp";
-    private String successUrl = "/";
+    private String loginUrl = "/c8/login.jsp";
+    private String successUrl = "/c8/index.jsp";
 
     @Override
     protected boolean onPreHandle(ServletRequest request, ServletResponse response, Object mappedValue) throws Exception {

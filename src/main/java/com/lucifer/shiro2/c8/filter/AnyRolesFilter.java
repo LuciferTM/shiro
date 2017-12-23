@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class AnyRolesFilter extends AccessControlFilter {
 
-    private String unauthorizedUrl = "/unauthorized.jsp";
-    private String loginUrl = "/login.jsp";
+    private String unauthorizedUrl = "/c8/unauthorized.jsp";
+    private String loginUrl = "/c8/login.jsp";
 
     @Override
     protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) throws Exception {
