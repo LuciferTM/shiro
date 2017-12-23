@@ -4,6 +4,6 @@
     <title></title>
 </head>
 <body>
-退出成功！<a href="${pageContext.request.contextPath}/login">登录</a>
+退出成功！<a href="${pageContext.request.contextPath}/c7/login">登录</a>
 </body>
 </html>

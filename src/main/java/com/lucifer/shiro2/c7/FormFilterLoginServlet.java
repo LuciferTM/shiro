@@ -15,7 +15,7 @@ import java.io.IOException;
  * <p>Date: 14-1-29
  * <p>Version: 1.0
  */
-@WebServlet(name = "formFilterLoginServlet", urlPatterns = "/formfilterlogin")
+@WebServlet(name = "formFilterLoginServlet", urlPatterns = "/c7/formfilterlogin")
 public class FormFilterLoginServlet extends HttpServlet {
 
     @Override
@@ -35,6 +35,6 @@ public class FormFilterLoginServlet extends HttpServlet {
             req.setAttribute("error", "未知错误：" + errorClassName);
         }
 
-        req.getRequestDispatcher("/WEB-INF/jsp/formfilterlogin.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/jsp/c7/formfilterlogin.jsp").forward(req, resp);
     }
 }

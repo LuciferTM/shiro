@@ -15,13 +15,13 @@ import java.io.IOException;
  * <p>Date: 14-1-29
  * <p>Version: 1.0
  */
-@WebServlet(name = "permissionServlet", urlPatterns = "/permission")
+@WebServlet(name = "permissionServlet", urlPatterns = "/c7/permission")
 public class PermissionServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Subject subject = SecurityUtils.getSubject();
         subject.checkPermission("user:create");
-        req.getRequestDispatcher("/WEB-INF/jsp/hasPermission.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/jsp/c7/hasPermission.jsp").forward(req, resp);
     }
 }

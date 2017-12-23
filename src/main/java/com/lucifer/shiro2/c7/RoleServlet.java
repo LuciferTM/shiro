@@ -15,13 +15,13 @@ import java.io.IOException;
  * <p>Date: 14-1-29
  * <p>Version: 1.0
  */
-@WebServlet(name = "roleServlet", urlPatterns = "/role")
+@WebServlet(name = "roleServlet", urlPatterns = "/c7/role")
 public class RoleServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Subject subject = SecurityUtils.getSubject();
         subject.checkRole("admin");
-        req.getRequestDispatcher("/WEB-INF/jsp/hasRole.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/jsp/c7/hasRole.jsp").forward(req, resp);
     }
 }

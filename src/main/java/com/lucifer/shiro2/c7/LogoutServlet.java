@@ -14,13 +14,13 @@ import java.io.IOException;
  * <p>Date: 14-1-29
  * <p>Version: 1.0
  */
-@WebServlet(name = "logoutServlet", urlPatterns = "/logout")
+@WebServlet(name = "logoutServlet", urlPatterns = "/c7/logout")
 public class LogoutServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         SecurityUtils.getSubject().logout();
-        req.getRequestDispatcher("/WEB-INF/jsp/logoutSuccess.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/jsp/c7/logoutSuccess.jsp").forward(req, resp);
     }
 
 }

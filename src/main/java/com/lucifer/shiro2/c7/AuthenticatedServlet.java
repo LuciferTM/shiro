@@ -15,16 +15,16 @@ import java.io.IOException;
  * <p>Date: 14-1-29
  * <p>Version: 1.0
  */
-@WebServlet(name = "authenticatedServlet", urlPatterns = "/authenticated")
+@WebServlet(name = "authenticatedServlet", urlPatterns = "/c7/authenticated")
 public class AuthenticatedServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Subject subject = SecurityUtils.getSubject();
         if(subject.isAuthenticated()) {
-            req.getRequestDispatcher("/WEB-INF/jsp/authenticated.jsp").forward(req, resp);
+            req.getRequestDispatcher("/WEB-INF/jsp/c7/authenticated.jsp").forward(req, resp);
         } else {
-            req.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(req, resp);
+            req.getRequestDispatcher("/WEB-INF/jsp/c7/login.jsp").forward(req, resp);
         }
     }
 

@@ -12,12 +12,12 @@ import java.io.IOException;
  * <p>Date: 14-1-29
  * <p>Version: 1.0
  */
-@WebServlet(name = "unauthorizedServlet", urlPatterns = "/unauthorized")
+@WebServlet(name = "unauthorizedServlet", urlPatterns = "/c7/unauthorized")
 public class UnAuthorizedServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/WEB-INF/jsp/unauthorized.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/jsp/c7/unauthorized.jsp").forward(req, resp);
     }
 
 
