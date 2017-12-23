@@ -12,9 +12,7 @@ import org.apache.shiro.web.filter.mgt.PathMatchingFilterChainResolver;
 import javax.servlet.Filter;
 
 /**
- * <p>User: Zhang Kaitao
- * <p>Date: 14-2-3
- * <p>Version: 1.0
+ *
  */
 public class MyIniWebEnvironment extends IniWebEnvironment {
     @Override

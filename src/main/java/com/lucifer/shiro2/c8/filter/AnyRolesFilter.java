@@ -10,9 +10,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * <p>User: Zhang Kaitao
- * <p>Date: 14-2-4
- * <p>Version: 1.0
+ 任意角色授权拦截器
  */
 public class AnyRolesFilter extends AccessControlFilter {
 
@@ -26,6 +24,8 @@ public class AnyRolesFilter extends AccessControlFilter {
             return true;//如果没有设置角色参数，默认成功
         }
         for(String role : roles) {
+            //只要有一个role符合就可以了
+            //shiro.ini 中配置了 admin和user
             if(getSubject(request, response).hasRole(role)) {
                 return true;
             }

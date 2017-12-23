@@ -6,9 +6,8 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
 /**
- * <p>User: Zhang Kaitao
- * <p>Date: 14-2-3
- * <p>Version: 1.0
+ AccessControlFilter继承了PathMatchingFilter，并扩展了了两个方法：
+ isAccessAllowed是否允许访问， onAccessDenied拒绝访问之后怎么处理
  */
 public class MyAccessControlFilter extends AccessControlFilter {
     @Override

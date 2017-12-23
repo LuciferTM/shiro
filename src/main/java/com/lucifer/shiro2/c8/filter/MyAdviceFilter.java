@@ -6,9 +6,9 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
 /**
- * <p>User: Zhang Kaitao
- * <p>Date: 14-2-3
- * <p>Version: 1.0
+ AdviceFilter提供了AOP的功能，其实现和SpringMVC中的Interceptor思想一样：
+ 具体可参考我的SpringMVC教程中的处理器拦截器部分：
+ http://www.iteye.com/blogs/subjects/kaitao-springmvc
  */
 public class MyAdviceFilter extends AdviceFilter {
     @Override

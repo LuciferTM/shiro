@@ -9,9 +9,7 @@ import javax.servlet.ServletResponse;
 import java.io.IOException;
 
 /**
- * <p>User: Zhang Kaitao
- * <p>Date: 14-2-3
- * <p>Version: 1.0
+ * OncePerRequestFilter保证一次请求只调用一次doFilterInternal，即如内部的forward不会再多执行一次doFilterInternal：
  */
 public class MyOncePerRequestFilter extends OncePerRequestFilter {
     @Override
