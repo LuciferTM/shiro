@@ -12,9 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * <p>User: Zhang Kaitao
- * <p>Date: 14-2-4
- * <p>Version: 1.0
+ * 基于表单的Fileter，登录就用这个
  */
 public class FormLoginFilter extends PathMatchingFilter {
 
